@@ -32,7 +32,7 @@ def getAllWords(matrix):
 
 
 def createDictList():
-    with open('dictionary.txt') as file:
+    with open("dictionary.txt") as file:
         ret = file.read().split()
         for i in range(len(ret)):
             ret[i] = ret[i].upper()
@@ -114,18 +114,24 @@ def inRange(matrix, i, j):
 
 if __name__ == "__main__":
     matrix = [
-        ["R6","_" ,"_" ,"_" ,"_" ,"_" ,"_" ,"_" ],
-        ["I" ,"_" ,"_" ,"_" ,"_" ,"_" ,"_" ,"_" ],
-        ["H" ,"_" ,"_" ,"_" ,"_" ,"_" ,"_" ,"_" ],
-        ["B" ,"@" ,"_" ,"_" ,"_" ,"_" ,"_" ,"_"],
-        ["S" ,"U6","R" ,"_" ,"_" ,"I" ,"_" ,"_" ],
-        ["N6","D" ,"C" ,"_" ,"@" ,"A" ,"_" ,"_" ],
-        ["Q" ,"I" ,"N" ,"@" ,"R6","L6","A" ,"J" ],
-        ["@" ,"E" ,"E" ,"R" ,"D" ,"M6","F" ,"E" ]
+        ["H", "N" ,"O" ,"I" ,"F" ,"N", "N" ,"D" ,"T" ],
+        ["W", "P" ,"V" ,"I" ,"T" ,"F", "O" ,"G" ,"L" ],
+        ["L", "K" ,"A" ,"T" ,"R" ,"I", "E" ,"A" ,"S" ],
+        ["M", "H" ,"@" ,"Q" ,"X" ,"N", "H" ,"E" ,"A" ],
+        ["R", "C" ,"E" ,"I" ,"O" ,"L", "R" ,"O" ,"B" ],
+        ["E", "S" ,"G" ,"C" ,"@" ,"T", "E" ,"Y" ,"G" ],
+        ["O", "N" ,"S" ,"I" ,"P" ,"A", "S" ,"R" ,"Z" ],
+        ["S", "@" ,"L" ,"N" ,"R" ,"M", "A" ,"M" ,"Y" ],
+        ["T", "I" ,"P" ,"L" ,"D" ,"S", "A" ,"I" ,"A" ],
+        ["S", "O" ,"E" ,"E" ,"E" ,"T", "J" ,"S" ,"C" ],
+        ["P", "@" ,"I" ,"E" ,"U" ,"O", "E" ,"E" ,"S" ],
+        ["R", "B" ,"L" ,"N" ,"S" ,"A", "D" ,"U" ,"R" ],
+        ["I", "C" ,"E" ,"T" ,"U" ,"C", "U" ,"D" ,"I" ],
+        
     ]
 
     d = getAllWords(matrix)
 
     for key in d:
-        d[key] = [w for w in d[key] if (len(w) >= 3)]
+        d[key] = [w for w in d[key] if (len(w) >= 8)]
     print(d)
